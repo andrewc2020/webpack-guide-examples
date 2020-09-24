@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const {BabelPlugin} = require('@babel/plugin-syntax-dynamic-import');
 
 
 
@@ -26,6 +27,7 @@ module.exports = {
 
   
   plugins: [
+    
     new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
     new HtmlWebpackPlugin({
       title: 'Output Management',
