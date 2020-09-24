@@ -16,8 +16,7 @@ module.exports = {
   
   entry: {
     app: './src/index.js',
-    print: './src/print.js',
-    another: './src/another-module.js',
+   
   },
   devtool: 'inline-source-map',
   devServer: {
@@ -34,7 +33,8 @@ module.exports = {
   ],
   output: {
     filename: 'bundle.js',
-    filename: '[name].bundle.js',
+    
+    chunkFilename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
   },
@@ -42,7 +42,7 @@ module.exports = {
     alias: {
       '~': path.resolve(__dirname)
     }
-  },
+  }
   
   
 };
