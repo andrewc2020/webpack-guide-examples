@@ -7,9 +7,9 @@ This saves losing your work as you go, as the tutorial often asks you to delete 
 
 
   * codesplitting
-  development
-  dynamic_imports
-  dynamicimportbabel
-  manage_output
-  setup
-  typescript
+  - development
+  - dynamic_imports
+  - dynamicimportbabel
+  - manage_output
+  - setup
+  - typescript
