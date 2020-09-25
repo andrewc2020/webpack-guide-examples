@@ -13,3 +13,4 @@ This saves losing your work as you go, as the tutorial often asks you to delete 
   * manage_output
   - setup
   - typescript
+  - testing
