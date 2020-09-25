@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios'
  
 export const doIncrement = (prevState) => ({
   counter: prevState.counter + 1,
@@ -21,6 +22,18 @@ class App extends Component {
  
     this.onIncrement = this.onIncrement.bind(this);
     this.onDecrement = this.onDecrement.bind(this);
+  }
+  onIncrement() {
+    this.setState(doIncrement);
+  }
+ 
+  onDecrement() {
+    this.setState(doDecrement);
+  }
+  componentDidMount() {
+    axios.get('http://mydomain/counter')
+      .then(counter => this.setState({ asyncCounters: counter }))
+      .catch(error => console.log(error));
   }
     render() {
         const { counter } = this.state;
