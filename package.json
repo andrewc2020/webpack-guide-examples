@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "start": "webpack-dev-server --config --open ./webpack.config.js",
-    "test:unit": "mocha --require @babel/register --require ~/weback-demo/test/helpers.js --require ~/webpack-demo/test/dom.js --require ignore-styles '~/webpack-demo/test/**/*.spec.js'",
+    "test:unit": "mocha --require @babel/register --require ./test/helpers.js --require ./test/dom.js --require ignore-styles './test/**/*.spec.js'",
     "watch": "webpack --watch",
     "build-babel": "babel src -d dist",
     "build": "npm run typescript && webpack",
