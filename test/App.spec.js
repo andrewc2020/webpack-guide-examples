@@ -1,4 +1,6 @@
-import { doIncrement, doDecrement } from './App';
+import React from 'react';
+import App, { doIncrement, doDecrement, Counter } from './App';
+ 
  
 describe('Local State', () => {
   it('should increment the counter in state', () => {
@@ -14,4 +16,11 @@ describe('Local State', () => {
  
     expect(newState.counter).to.equal(-1);
   });
+  
+  it('renders the Counter wrapper', () => {
+    const wrapper = shallow(<App />);
+    expect(wrapper.find(Counter)).to.have.length(1);
+  });
+  
 });
+

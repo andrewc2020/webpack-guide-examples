@@ -8,8 +8,7 @@ export const doDecrement = (prevState) => ({
   counter: prevState.counter - 1,
 });
 
-export const Counter = ({ counter }) =>
-  <p>{counter}</p>
+
  
 class App extends Component {
     render() {
@@ -36,4 +35,7 @@ class App extends Component {
           </div>
         );
     }
+    
 }
+export const Counter = ({ counter }) =>
+  <p>{counter}</p>
