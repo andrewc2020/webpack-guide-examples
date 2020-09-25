@@ -14,7 +14,7 @@
 
   // }).catch(error => 'An error occurred while loading the component');
   // As import() returns a promise, it can be used with async functions. 
-            //However, this requires using a pre-processor like Babel and the Syntax Dynamic Import Babel Plugin.
+            //However, this requires using a pre-processor like Babel and the Syntax Dynamic Import Babel Plugin or Typescript
             // add .babelrc (see file in src) and install the plugin @babel/plugin-syntax-dynamic-import plus @babel/core, @babel/cli and @babel/preset-env
             //Here's how it        would simplify the code:
 
