@@ -30,3 +30,5 @@
  getComponent().then(component => {
   document.body.appendChild(component);
 })
+
+export default function getComponent;
