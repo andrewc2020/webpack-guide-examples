@@ -13,6 +13,6 @@ This saves losing your work as you go, as the tutorial often asks you to delete 
     - manage_output
     - setup
     - typescript
+    - testing
 
-The exception is the current branch which was added to illustrate adding support for typescript.
-The Typescript compiler/ transpiler tsc replaces babel.  
+The exception is the current branch which was added to illustrate adding support for testing with mocha, babel and typescript.
