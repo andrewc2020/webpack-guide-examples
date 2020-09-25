@@ -11,6 +11,17 @@ export const doDecrement = (prevState) => ({
 
  
 class App extends Component {
+  constructor() {
+    super();
+ 
+    this.state = {
+      counter: 0,
+      asyncCounters: null,
+    };
+ 
+    this.onIncrement = this.onIncrement.bind(this);
+    this.onDecrement = this.onDecrement.bind(this);
+  }
     render() {
         const { counter } = this.state;
      
@@ -39,3 +50,5 @@ class App extends Component {
 }
 export const Counter = ({ counter }) =>
   <p>{counter}</p>
+
+  export default App;
