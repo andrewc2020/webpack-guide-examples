@@ -1,5 +1,18 @@
 import { expect } from 'chai';
 
+let mochaAsync = (fn) => {
+    return (done) => {
+      fn.call().then(done, (err)=>{done(err)});
+    };
+  };
+
+  let someLongSetupCode = () =>{
+    setTimeout(()=>{}, 200);
+  }
+
+  beforeEach(mochaAsync(async () => {
+    await someLongSetupCode();
+}));
 
 describe('async tests',()=>{
 
