@@ -16,3 +16,5 @@ This saves losing your work as you go, as the tutorial often asks you to delete 
     - testing
 
 The exception is the current branch which was added to illustrate adding support for testing with mocha, babel and typescript.
+
+To run the tests npm run test-typed

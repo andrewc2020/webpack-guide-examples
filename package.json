@@ -10,7 +10,8 @@
     "build-babel": "babel src -d dist",
     "build": "npm run typescript && webpack",
     "server": "node server.js",
-    "typescript": "tsc"
+    "typescript": "tsc",
+    "test-typed": "tsc --jsx react ./test/*.spec.ts && npm run test:unit"
   },
   "author": "",
   "license": "ISC",
