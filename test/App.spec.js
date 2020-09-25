@@ -73,6 +73,7 @@ describe('Local State', () => {
     promise.then(() => {
       expect(wrapper.state().asyncCounters).to.equal(result);
     });
-  });
+   
+  });// describe ends
 });
 
