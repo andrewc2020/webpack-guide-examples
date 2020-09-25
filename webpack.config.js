@@ -10,6 +10,7 @@ const yaml = require('yamljs');
 
 
 module.exports = {
+  mode: 'development',
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
