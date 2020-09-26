@@ -31,4 +31,3 @@
   document.body.appendChild(component);
 })
 
-export default function getComponent;
