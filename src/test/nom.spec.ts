@@ -1,8 +1,8 @@
 import { expect } from 'chai';
 
-let mochaAsync = (fn) => {
-    return (done) => {
-      fn.call().then(done, (err)=>{done(err)});
+let mochaAsync = (fn:any) => {
+    return (done:any) => {
+      fn.call().then(done, (err: any)=>{done(err)});
     };
   };
 

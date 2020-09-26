@@ -2,6 +2,7 @@ import path from 'path';
 import webpack from 'webpack';
 import { createFsFromVolume, Volume } from 'memfs';
 
+
 export default (fixture, options = {}) => {
   const compiler = webpack({
     context: __dirname,
@@ -14,7 +15,7 @@ export default (fixture, options = {}) => {
       rules: [{
         test: /\.txt$/,
         use: {
-          loader: path.resolve(__dirname, '../src/loader.js'),
+          loader: path.resolve(__dirname, '../loader.js'),
           options: {
             name: 'Alice'
           }
