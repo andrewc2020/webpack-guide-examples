@@ -17,4 +17,11 @@ This saves losing your work as you go, as the tutorial often asks you to delete 
 
 The exception is the current branch which was added to illustrate adding support for testing with mocha, babel and typescript.
 
+Much learning was gained from Robin Wieruch's blog article https://www.robinwieruch.de/react-testing-mocha-chai-enzyme-sinon
+
+Exploring asynchronous testing was also greatly helped by this article https://staxmanade.com/2015/11/testing-asyncronous-code-with-mochajs-and-es7-async-await/. 
+
+The testing suite makes copious use of both blog articles and so far does not attempt to test the application itself, but this may follow in a future commit.
+
+
 To run the tests npm run test-typed

@@ -5,7 +5,7 @@ import doit from './index'
 
 
 
-describe("all tests",()=>{
+describe("Enzyme and async tests",()=>{
     it('should find a tag on the component',()=>{
         const wrapper = shallow(<Home/>);
     expect(wrapper.find(Home)).to.have.length(0);
