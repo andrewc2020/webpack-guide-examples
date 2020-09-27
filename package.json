@@ -11,7 +11,9 @@
     "build": "npm run typescript && webpack",
     "server": "node server.js",
     "typescript": "tsc --jsx react",
-    "test-typed": "tsc --jsx react ./src/test/*.spec.ts && npm run test:unit"
+    "test-typed": "tsc --jsx react ./src/test/*.spec.ts && npm run test:unit",
+    "test": "mocha --require @babel/register  --require @babel/preset-env --require ./src/test/helpers.js --require ./src/test/dom.js --require ignore-styles './dist/test/**/*.spec.js'"
+   
  
   },
   "author": "",
