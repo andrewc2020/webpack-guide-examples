@@ -45,8 +45,8 @@ describe("Enzyme and async tests",()=>{
     });
 
     it('should find a div on the component',()=>{
-        const wrapper = shallow(<Home className="unique"/>);
-    expect(wrapper.find(Home)).to.have.length(0);
+        const wrapper = shallow(<Home />);
+    expect(wrapper.find('div')).to.have.length(1);
 
     })
 
