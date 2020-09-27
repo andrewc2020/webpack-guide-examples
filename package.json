@@ -5,13 +5,15 @@
   "private": true,
   "scripts": {
     "start": "webpack-dev-server --config  ./webpack.config.js --open" ,
-    "test:unit": "./node_modules/.bin/mocha --require @babel/register  --require @babel/preset-env --require ./test/helpers.js --require ./test/dom.js --require ignore-styles './test/**/*.spec.js'",
+   
+    "test:unit": "./node_modules/.bin/mocha --require @babel/register  --require @babel/preset-env --require ./src/test/helpers.js --require ./src/test/dom.js --require ignore-styles './test/**/*.spec.js'",
+   
     "watch": "webpack --watch",
     "build-babel": "babel src -d dist",
     "build": "npm run typescript && webpack",
     "server": "node server.js",
     "typescript": "tsc",
-    "test-typed": "tsc --jsx react ./test/*.spec.ts && npm run test:unit"
+    "test-typed": "tsc --jsx react ./src/test/*.spec.ts && npm run test:unit"
   },
   "author": "",
   "license": "ISC",
