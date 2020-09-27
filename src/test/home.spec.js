@@ -2,6 +2,10 @@ import React, {Component} from 'react';
 import { expect } from 'chai';
 import Home from './home'
 import doit from './index'
+import { mochaAsync } from './mochaAsync';
+
+
+
 
 
 
@@ -39,6 +43,14 @@ describe("Enzyme and async tests",()=>{
             }
         }, done);
     });
+
+    it('should find a div on the component',()=>{
+        const wrapper = shallow(<Home className="unique"/>);
+    expect(wrapper.find(Home)).to.have.length(0);
+
+    })
+
+    
    
     
    

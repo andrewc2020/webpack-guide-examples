@@ -37,15 +37,16 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 exports.__esModule = true;
 var chai_1 = require("chai");
-var mochaAsync = function (fn) {
-    return function (done) {
-        fn.call().then(done, function (err) { done(err); });
-    };
-};
+var mochaAsync_1 = require("./mochaAsync");
 var someLongSetupCode = function () {
     setTimeout(function () { }, 200);
 };
-beforeEach(mochaAsync(function () { return __awaiter(void 0, void 0, void 0, function () {
+var someAsyncMethodToTest = new Promise(function (resolve, reject) {
+    setTimeout(function () {
+        resolve(true);
+    }, 200);
+});
+beforeEach(mochaAsync_1.mochaAsync(function () { return __awaiter(void 0, void 0, void 0, function () {
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0: return [4 /*yield*/, someLongSetupCode()];
@@ -84,4 +85,16 @@ describe('async tests', function () {
             });
         });
     });
+    it("Sample async/await mocha test using wrapper", mochaAsync_1.mochaAsync(function () { return __awaiter(void 0, void 0, void 0, function () {
+        var x;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, someAsyncMethodToTest];
+                case 1:
+                    x = _a.sent();
+                    chai_1.expect(x).to.equal(true);
+                    return [2 /*return*/];
+            }
+        });
+    }); }));
 });

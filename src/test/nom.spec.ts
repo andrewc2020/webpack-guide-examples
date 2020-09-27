@@ -1,14 +1,17 @@
 import { expect } from 'chai';
+import { mochaAsync } from './mochaAsync';
 
-let mochaAsync = (fn) => {
-    return (done) => {
-      fn.call().then(done, (err)=>{done(err)});
-    };
-  };
+
 
   let someLongSetupCode = () =>{
     setTimeout(()=>{}, 200);
   }
+
+  let someAsyncMethodToTest = new Promise(function(resolve, reject) {
+    setTimeout(function() {
+        resolve(true);
+    }, 200);
+});
 
   beforeEach(mochaAsync(async () => {
     await someLongSetupCode();
@@ -37,6 +40,11 @@ describe('async tests',()=>{
         expect(result).to.equal("Hello!");
     });
 
-    
+    it("Sample async/await mocha test using wrapper", mochaAsync(async () => {
+      var x = await someAsyncMethodToTest;
+      expect(x).to.equal(true);
+  }));
+
+  
 
 })
