@@ -14,7 +14,7 @@ This saves losing your work as you go, as the tutorial often asks you to delete 
     - setup
     - typescript
     - testing
-    \* loader 
+    - loader 
 
 The current branch which was added to illustrate adding a simple loader with an accompanying test.  This is from the section of the guide on creating loaders. Whereas the guide example uses jest, this uses mocha with chai and typescript for consistency.
 
